@@ -1,0 +1,116 @@
+/* Corpo e Fundo */
+body {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  background: url('assets/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  transition: background 0.5s ease-in-out;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+/* Navegação */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  text-align: center;
+  z-index: 10;
+}
+
+.navbar a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #ffeb3b;
+}
+
+/* Caixa de Citações */
+#quoteBox {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  margin: 60px auto 20px auto;
+  border-radius: 10px;
+  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#quoteText {
+  font-size: 18px;
+  font-style: italic;
+  color: #ffeb3b;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Botões */
+button {
+  padding: 15px 30px;
+  margin: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.natal {
+  background-color: #4caf50;
+  color: white;
+}
+
+.anonovo {
+  background-color: #ff5722;
+  color: white;
+}
+
+.share-buttons button {
+  background-color: #ff9800;
+  color: white;
+}
+
+/* Mini-Game */
+#gameBox {
+  margin-top: 20px;
+}
+
+#giftMessage {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #ffeb3b;
+  font-style: italic;
+}

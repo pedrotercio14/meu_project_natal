@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mensagens de Natal e Ano Novo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar">
+      <a href="#quoteBox">Citações</a>
+      <a href="#messageBox">Mensagens</a>
+    </nav>
+
+    <div id="quoteBox">
+      <p id="quoteText"></p>
+    </div>
+
+    <h1>Mensagens de Natal e Ano Novo</h1>
+    <p>Clique para ver uma mensagem especial!</p>
+
+    <button class="natal" onclick="showMessageWithName('natal')">Mensagem de Natal</button>
+    <button class="anonovo" onclick="showMessageWithName('anonovo')">Mensagem de Ano Novo</button>
+    <button class="random" onclick="randomMessage()">Mensagem Aleatória</button>
+
+    <div class="message" id="messageBox"></div>
+    <div class="share-buttons">
+      <button onclick="shareOnWhatsApp()">Compartilhar no WhatsApp</button>
+      <button onclick="shareOnInstagram()">Compartilhar no Instagram</button>
+    </div>
+
+    <div id="theme-buttons">
+      <h3>Escolha o Tema:</h3>
+      <button onclick="changeTheme('red')">Tema Vermelho</button>
+      <button onclick="changeTheme('blue')">Tema Azul</button>
+      <button onclick="changeTheme('default')">Tema Padrão</button>
+    </div>
+
+    <div id="music-control">
+      <button onclick="toggleMusic()">Tocar Música</button>
+      <audio id="backgroundMusic" loop>
+        <source src="audio/music.mp3" type="audio/mp3">
+        Seu navegador não suporta áudio.
+      </audio>
+    </div>
+
+    <div id="gameBox">
+      <button onclick="revealGift()">Abrir Presente</button>
+      <p id="giftMessage"></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
