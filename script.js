@@ -33,6 +33,52 @@ function displayWelcomeMessage() {
 displayWelcomeMessage();
 
 // Mensagens Personalizadas
+const natalMessages = [
+  `🎄 Feliz Natal, ${userName}! Que esta data especial aqueça seu coração com amor e esperança.`,
+  `🎅 Boas Festas, ${userName}! Que seu Natal seja mágico e cheio de alegria.`,
+  `🎁 ${userName}, que este Natal traga paz e harmonia para você e sua família.`,
+  `🔔 ${userName}, que as badaladas do Natal soem felicidade e união em seu lar.`,
+  `🌟 ${userName}, o espírito natalino está nos pequenos gestos. Feliz Natal!`,
+  `🕊️ ${userName}, que a paz do Natal encha sua vida de amor e serenidade.`,
+  `🎄 Um Natal cheio de abraços e memórias inesquecíveis para você, ${userName}!`,
+  `🎁 Que o Natal seja um momento de renovar sua fé e gratidão, ${userName}.`,
+  `🎅 ${userName}, um Natal repleto de luz e risadas para você e sua família.`,
+  `🔔 O Natal é sobre compartilhar amor. Feliz Natal, ${userName}!`,
+  `✨ Que as estrelas do Natal iluminem sua jornada, ${userName}.`,
+  `🎄 ${userName}, que o verdadeiro espírito do Natal transforme seu coração.`,
+  `🌌 ${userName}, sob o céu natalino, agradeça por mais um ano cercado de amor.`,
+  `🎋 Que a magia do Natal reacenda seus melhores sonhos, ${userName}.`,
+  `🎂 Celebre o nascimento de Cristo com amor e fé, ${userName}.`,
+  `🌟 O Natal nos ensina que o amor é o maior presente. Feliz Natal, ${userName}!`,
+  `🎄 Que sua árvore de Natal seja carregada de boas memórias, ${userName}.`,
+  `🌟 Que o brilho das luzes natalinas inspire sua vida, ${userName}.`,
+  `🎅 O presente mais precioso é estar com quem amamos. Feliz Natal, ${userName}!`,
+  `🕊️ Que este Natal plante sementes de paz e felicidade, ${userName}.`
+];
+
+const anoNovoMessages = [
+  `🎆 Feliz Ano Novo, ${userName}! Que 2025 seja um ano cheio de luz e amor.`,
+  `🥂 Boas-vindas a 2025, ${userName}! Que seus sonhos se tornem realidade.`,
+  `🎉 Celebre o início de 2025 com gratidão e entusiasmo, ${userName}!`,
+  `🌟 ${userName}, que este novo ano traga momentos inesquecíveis.`,
+  `✨ Deixe para trás o passado e abrace o futuro com coragem, ${userName}.`,
+  `🗓️ Faça de 2025 o melhor capítulo da sua história, ${userName}.`,
+  `🎆 Um brinde às conquistas que te esperam em 2025, ${userName}!`,
+  `🌈 Que 2025 seja um ano cheio de cores, sorrisos e alegrias, ${userName}.`,
+  `🌍 Que 2025 nos aproxime mais da paz e união, ${userName}.`,
+  `🚀 Voe alto e realize seus maiores sonhos em 2025, ${userName}!`,
+  `🥂 Saúde e felicidade em cada dia de 2025, ${userName}.`,
+  `🎇 Que cada estrela no céu te guie para novas conquistas, ${userName}.`,
+  `💫 O Ano Novo é um recomeço. Aproveite cada momento, ${userName}.`,
+  `🎉 ${userName}, celebre cada vitória em 2025, por menor que seja.`,
+  `🌟 Um ano de oportunidades incríveis te espera em 2025, ${userName}.`,
+  `✨ Renove sua energia e trace novos objetivos para 2025, ${userName}.`,
+  `🎆 Brilhe intensamente em 2025, ${userName}. O mundo precisa da sua luz.`,
+  `🍀 Que a sorte e a felicidade te acompanhem neste Ano Novo, ${userName}.`,
+  `💖 Seja a melhor versão de si mesmo em 2025, ${userName}.`,
+  `🎇 Que 2025 seja repleto de amor, saúde e muito sucesso para você, ${userName}!`
+];
+
 function showMessageWithName(type) {
   const userName = prompt("Digite seu nome para personalizar a mensagem:");
   if (!userName) {
@@ -43,9 +89,11 @@ function showMessageWithName(type) {
   let message;
 
   if (type === "natal") {
-    message = `🎄 Feliz Natal, ${userName}! Que esta data especial aqueça seu coração com o amor dos que te cercam e ilumine seu caminho com esperança, alegria e paz!`;
+    const randomIndex = Math.floor(Math.random() * natalMessages.length);
+    message = natalMessages[randomIndex];
   } else if (type === "anonovo") {
-    message = `🎆 Feliz Ano Novo, ${userName}! Que 2025 traga novas oportunidades, muitos sorrisos e momentos inesquecíveis. Que cada conquista seja uma celebração de sua dedicação e esforço!`;
+    const randomIndex = Math.floor(Math.random() * anoNovoMessages.length);
+    message = anoNovoMessages[randomIndex];
   } else {
     alert("Tipo de mensagem inválido!");
     return;
@@ -57,10 +105,10 @@ function showMessageWithName(type) {
     return;
   }
 
-  messageBox.innerHTML = message;
+  messageBox.innerHTML = message.replace(/\${userName}/g, userName);
 }
 
-// Mensagem Aleatória
+// Mensagens Aleatórias
 function randomMessage() {
   const messages = [
     "🎄 Que seu Natal seja cheio de paz e amor!",
@@ -73,17 +121,16 @@ function randomMessage() {
     "🎂 Que a celebração do nascimento de Cristo renove sua fé na vida e no amor.",
     "🕊️ Que as boas ações deste Natal plantem sementes de paz no mundo.",
     "🎄 Que sua árvore de Natal seja carregada de bons desejos e realizações futuras.",
-    "🌟 Que o verdadeiro sentido do Natal esteja presente em cada gesto seu.",
     "🎆 Que 2025 seja repleto de conquistas e momentos inesquecíveis!",
     "🥂 Brinde às vitórias e aos desafios que nos fizeram crescer em 2024.",
-    "🌟 Um novo ano é uma nova oportunidade para recomeçar!",
-    "🗓️ Faça de 2025 o melhor capítulo da sua história.",
-    "🎉 Que este Ano Novo seja tão brilhante quanto seus sonhos!",
     "✨ Deixe para trás o que não te serve e leve o que te faz feliz.",
     "🕰️ O tempo não volta, mas os aprendizados ficam. Feliz Ano Novo!",
     "🚀 Em 2025, voe alto e conquiste tudo o que desejar!",
     "🌈 Um Ano Novo cheio de cores, risos e muita felicidade para você.",
-    "🌍 Que o próximo ano nos aproxime mais da paz e da união."
+    "🎉 Que este Ano Novo seja tão brilhante quanto seus sonhos!",
+    "🌟 Que o verdadeiro sentido do Natal esteja presente em cada gesto seu.",
+    "🍀 Que 2025 seja um ano de sorte, alegria e conquistas!",
+    "🕊️ Paz e harmonia para todos neste Natal e Ano Novo!"
   ];
 
   const randomIndex = Math.floor(Math.random() * messages.length);
