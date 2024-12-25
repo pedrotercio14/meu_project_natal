@@ -6,31 +6,32 @@
   <title>Mensagens de Natal e Ano Novo</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 <body>
   <div class="container">
-    <nav class="navbar">
-      <a href="#quoteBox">Citações</a>
-      <a href="#messageBox">Mensagens</a>
-    </nav>
-
+    <!-- Citações -->
     <div id="quoteBox">
-      <p id="quoteText"></p>
+      <h1>🎄 Mensagens de Natal e Ano Novo 🎆</h1>
+      <p id="quoteText">Carregando mensagem especial...</p>
     </div>
 
-    <h1>Mensagens de Natal e Ano Novo</h1>
-    <p>Clique para ver uma mensagem especial!</p>
-
+    <!-- Botões de Mensagens -->
+    <p>Clique para uma mensagem personalizada!</p>
     <button class="natal" onclick="showMessageWithName('natal')">Mensagem de Natal</button>
     <button class="anonovo" onclick="showMessageWithName('anonovo')">Mensagem de Ano Novo</button>
     <button class="random" onclick="randomMessage()">Mensagem Aleatória</button>
 
     <div class="message" id="messageBox"></div>
+
+    <!-- Compartilhamento -->
     <div class="share-buttons">
+      <h3>Compartilhar Mensagens:</h3>
       <button onclick="shareOnWhatsApp()">Compartilhar no WhatsApp</button>
       <button onclick="shareOnInstagram()">Compartilhar no Instagram</button>
     </div>
 
+    <!-- Troca de Temas -->
     <div id="theme-buttons">
       <h3>Escolha o Tema:</h3>
       <button onclick="changeTheme('red')">Tema Vermelho</button>
@@ -38,7 +39,9 @@
       <button onclick="changeTheme('default')">Tema Padrão</button>
     </div>
 
+    <!-- Música -->
     <div id="music-control">
+      <h3>Música de Fundo:</h3>
       <button onclick="toggleMusic()">Tocar Música</button>
       <audio id="backgroundMusic" loop>
         <source src="audio/music.mp3" type="audio/mp3">
@@ -46,11 +49,44 @@
       </audio>
     </div>
 
-    <div id="gameBox">
-      <button onclick="revealGift()">Abrir Presente</button>
-      <p id="giftMessage"></p>
+    <!-- Neve -->
+    <div id="snow-container"></div>
+  </div>
+
+  <!-- Fogos de Artifício -->
+    <div id="fireworks-container">
+  </div>
+
+  <script src="script.js"></script>
+  
+
+</body>
+
+<!-- Direitos Autorais com Foto do Desenvolvedor -->
+<footer id="copyright">
+  <div class="developer-info">
+    <div class="developer-photo">
+      <img src="./assets/developer.jpeg" alt="Foto do Desenvolvedor">
+    </div>
+    <div class="developer-details">
+      <p>© 2024 <strong>Project-Natal</strong>. Todos os direitos reservados.</p>
+      <p>Desenvolvido por <strong>Pedro Tércio</strong>.</p>
+      <p>Acesse minhas redes sociais:</p>
+      <div class="social-links">
+        <a href="https://github.com/seu-usuario" target="_blank">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="https://wa.me/seu-numero" target="_blank">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="https://instagram.com/seu-usuario" target="_blank">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+      </div>
     </div>
   </div>
-  <script src="script.js"></script>
-</body>
+</footer>
+
 </html>
+
+
